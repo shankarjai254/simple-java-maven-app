@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools {
+        maven 'maven'   // name configured in Global Tool Configuration
+        //jdk 'JDK-17'        // adjust to your setup
+    }
     stages {
         stage('Build') {
             steps {
