@@ -5,6 +5,9 @@ pipeline {
         maven 'Maven_3.8.8_System'
         jdk 'javajenkins'
     }
+     environment {
+        SCANNER_HOME=tool 'sonar-scanner'
+    }
 
     stages {
         stage("Sonarqube Analysis") {
