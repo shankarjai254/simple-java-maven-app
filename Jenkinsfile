@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'Maven_3.8.8_System'   // name configured in Global Tool Configuration
-        jdk 'javajenkins'        // adjust to your setup
+        jdk 'javajenkins'        // adjust to your setup f3feqfeqf effefe
     }
     stages {
         stage('Build') {
