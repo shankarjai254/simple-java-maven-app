@@ -13,8 +13,7 @@ pipeline {
         stage("Sonarqube Analysis") {
             steps {
                 withSonarQubeEnv('sonar-server') {
-                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Java_project \
-                    -Dsonar.projectKey=Java_project '''
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner clean verify sonar:sonar -Dsonar.projectKey=Java_project -Dsonar.projectName='Java_project'  -Dsonar.token=sqp_2259f85580e3a34e236abaf216aec74cb895a626 '''
                 }
             }
         }
